@@ -6,5 +6,5 @@
  */
 
 export const greetDevelopers = (list: any): {}[] => {
-    return list.map((person: any) => ({ ...person, greeting: `Hi ${person.firstName}, what do you like the most about ${person.language}?` }))
+    return list.map((person: { firstName: string; language: string }) => ({ ...person, greeting: `Hi ${person.firstName}, what do you like the most about ${person.language}?` }))
 }
